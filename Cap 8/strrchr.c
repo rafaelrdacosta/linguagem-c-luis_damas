@@ -1,7 +1,5 @@
 #include<stdio.h>
 
-
-
 /*Retorna o endereço da última ocorrência de ch em s,
 caso não exista, retorna NULL*/
 
