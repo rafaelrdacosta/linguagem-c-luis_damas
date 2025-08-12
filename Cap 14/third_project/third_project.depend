@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1754935819 source:c:\users\rafae\onedrive\documentos\github\estudos\linguagem-c-luis_damas\cap 14\third_project\main.c
+	<stdio.h>
+
+1754935855 source:c:\users\rafae\onedrive\documentos\github\estudos\linguagem-c-luis_damas\cap 14\third_project\ifile.c
+	<stdio.h>
+
+1754936312 source:c:\users\rafae\onedrive\documentos\github\estudos\linguagem-c-luis_damas\cap 14\third_project\sfile.c
+	<stdio.h>
+	<string.h>
+
