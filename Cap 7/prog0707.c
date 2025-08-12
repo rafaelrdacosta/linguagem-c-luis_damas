@@ -2,6 +2,16 @@
 #include<locale.h>
 #include<string.h>
 
+#define OP_SAIR "SAIR"
+
+int strcountc(char *s, char ch){
+    int count = 0;
+    for(int i = 0; s[i] != '\0'; i++)
+        if(s[i] == ch)
+            count++;
+    return count;
+}
+
 char *wordupr(char *s){
     int i = 0;
     while(s[i] != '\0'){
@@ -16,31 +26,35 @@ char *wordupr(char *s){
     return s;
 }
 
-char *lastname(char *s){
-    int i, j = 0;
-    for(i = strlen(s) - 1; s[i] != ' '; i--){
-        s[j] = s[i];
-        j++;
+void Separa(char *Nome, char *Sobrenome){
+    int i, j;
+
+    if(strcountc(Nome, ' ' == 0)){
+        Sobrenome[0] = '\0';
+        return;
     }
-    s[j] = '\0';
-    return s;
+
+    for(i=strlen(Nome)-1, j=0; Nome[i] != ' '; )
+        Sobrenome[j++] = Nome[i--];
+    Sobrenome[j] = '\0';
+    Nome[i] = '\0';
+
+    strrev(Sobrenome);
 }
 
-
-
 main(){
-    char nome[100];
-    char opcao[5];
+    setlocale(LC_ALL, "Portuguese");
 
-    do{
-       printf("Digite seu nome completo: ");
-       gets(nome);
+    char Nome[100], Sobrenome[20];
 
-       printf("Nome: %s\n", wordupr(nome));
-       printf("Sobrenome: %s\n", strrev(lastname(nome)));
+    while(1){
+        printf("Nome: ");
+        gets(Nome);
 
-    }while(opcao != "SAIR");
-
-
+        if(stricmp(Nome, OP_SAIR) == 0)
+            break;
+        Separa(Nome, Sobrenome);
+        printf("%s, %s\n", wordupr(Sobrenome), wordupr(Nome));
+    }
 
 }
