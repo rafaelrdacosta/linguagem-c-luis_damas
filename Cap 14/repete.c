@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
 
 /*Implemente a função char *repete(char *s, int n)
 que cria dinamicamente uma nova string com n cópias

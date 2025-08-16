@@ -5,7 +5,7 @@
 #define MAX_LIN 80
 
 /**
- * @brief Este utilitário lê um arquivo de texto, procura por linhas
+ * Este utilitário lê um arquivo de texto, procura por linhas
  * que comecam com '$' seguidas de um numero e imprime o argumento
  * de linha de comando correspondente.
  * * Sintaxe: Mostra Arquivo [p1, p2, ... pk]
